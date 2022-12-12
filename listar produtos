@@ -1,0 +1,14 @@
+<?php
+                    query_posts( array(
+                        'post_type' => 'produto',
+                        'order' => 'DESC',
+                        'showposts' => 16,
+						'tax_query' => array(
+    array(
+      'taxonomy' => 'segmento',
+      'field' => 'term_id',
+      'terms' => 20,
+    )
+  ),
+                    ) );
+                    ?>
